@@ -2,7 +2,7 @@
 require_once('../controller/Controller.php');
 $unControleur = new Controller("localhost", "test_mvc", "root", "");
 $products = $unControleur->getProduct();
-require_once('header.php');
+require_once('form/header.php');
 if (isset($_POST['modifier_edit'])) {
     $unControleur->update("nom", "product", $_POST['product_nom_edit'], $_POST['product_id']);
     $unControleur->update("description", "product", $_POST['product_description_edit'], $_POST['product_id']);
@@ -36,4 +36,4 @@ if (isset($_POST['modifier_edit'])) {
     </form>
 </div>
 <?php
-require_once('footer.php');
+require_once('form/footer.php');
